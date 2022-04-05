@@ -1,3 +1,5 @@
+// const garments = require('./garments.json');
+
 let seasonFilter = 'All';
 let genderFilter = 'All';
 
