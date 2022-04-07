@@ -19,6 +19,7 @@ seasonOptions.addEventListener('click', function(evt){
 
 genderOptions.addEventListener('click', function(evt){
 	genderFilter = evt.target.value;
+	console.log(genderFilter);
 	filterData();
 });
 
@@ -26,6 +27,7 @@ function filterData() {
 	axios
 		.get(`/api/garments?gender=${genderFilter}&season=${seasonFilter}`)
 		.then(function(result) {
+			console.log(result.data);
 			searchResultsElem.innerHTML = garmentsTemplate({
 				garments : result.data.garments
 			})

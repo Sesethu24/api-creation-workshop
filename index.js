@@ -30,18 +30,20 @@ app.use(express.static('public'));
 
 const PORT = process.env.PORT || 4017;
 
-// API routes to be added here
-app.get('/api/garments', function(req, res){
-    // note that this route just send JSON data to the browser
-    // there is no template
-    res.json({garments});
-});
+// // API routes to be added here
+// app.get('/api/garments', function(req, res){
+//     // note that this route just send JSON data to the browser
+//     // there is no template
+//     res.json({garments});
+// });
 
 app.get('/api/garments', function(req, res){
 
     const gender = req.query.gender;
     const season = req.query.season;
-
+ 
+    console.log(gender);
+    console.log(season);
     const filteredGarments = garments.filter(garment => {
         // if both gender & season was supplied
         if (gender != 'All' && season != 'All') {
