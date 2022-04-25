@@ -51,8 +51,11 @@ img {
 
 	margin-top: 1em;
 	padding: 1em;
-
-	background-color: lightsalmon;
-
-
+    background-color: lightsalmon;
 }
+
+/* .message2 {
+	margin-top: 1em;
+	padding: 1em;
+    background-color: rgb(70, 218, 33);
+} */
